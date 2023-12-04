@@ -1,0 +1,26 @@
+{
+  "name": "automacao-cypress",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "dependencies": {
+    "faker": "^5.5.3",
+    "mocha-allure-reporter": "^1.4.0",
+    "openai": "^4.20.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "^13.6.0",
+    "cypress-multi-reporters": "^1.6.3",
+    "cypress-xpath": "^2.0.1"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "npx cypress run",
+    "cy:run:report": "npx cypress run --env allure=true  --reporter mocha-allure-reporter",
+    "generate:report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
